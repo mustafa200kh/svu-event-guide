@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Details - SVU Events Guide</title>
+  <meta name="description" content="Detailed information about SVU events including schedule, location, and gallery." />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- Page Loading Spinner -->
+  <div class="spinner-overlay" id="pageSpinner">
+    <div class="text-center">
+      <div class="spinner-border" style="color: var(--primary); width:3rem; height:3rem;" role="status"></div>
+      <p class="mt-3 fw-bold" style="color: var(--secondary);">Loading Event...</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       HEADER / NAVBAR
+       ============================================================ -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="bi bi-calendar-event me-2"></i>دليل الفعاليات <span>| SVU</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-1">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house me-1"></i>Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html"><i class="bi bi-calendar3 me-1"></i>Events</a></li>
+            <li class="nav-item"><a class="nav-link active" href="event.html"><i class="bi bi-info-circle me-1"></i>Event Details</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-people me-1"></i>About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       EVENT DETAIL HERO IMAGE
+       ============================================================ -->
+  <div class="event-detail-hero">
+    <img id="detailHeroImg" src="https://picsum.photos/seed/culture1/1400/400" alt="Event Hero Image" />
+    <div class="overlay-content">
+      <div id="detailHeroBadge" class="mb-2"></div>
+      <h1 id="detailHeroTitle">Spring Cultural Festival</h1>
+    </div>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div style="background:#fff; border-bottom:1px solid #eee; padding: 0.7rem 0;">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 small">
+          <li class="breadcrumb-item"><a href="index.html" style="color: var(--primary);">Home</a></li>
+          <li class="breadcrumb-item"><a href="events.html" style="color: var(--primary);">Events</a></li>
+          <li class="breadcrumb-item active" aria-current="page" id="breadcrumbTitle">Event Details</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main class="section-pad" id="eventDetailContent">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- ============================================================
+             LEFT COLUMN: Description, Gallery, Related Events
+             ============================================================ -->
+        <div class="col-lg-8">
+
+          <!-- Action Buttons -->
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <button class="btn btn-primary-custom" id="addToCalendarBtn">
+              <i class="bi bi-calendar-plus me-2"></i>Add to Calendar
+            </button>
+            <button class="btn btn-secondary-custom" id="shareBtn">
+              <i class="bi bi-share me-2"></i>Share
+            </button>
+            <a href="events.html" class="btn btn-outline-secondary rounded-pill">
+              <i class="bi bi-arrow-left me-2"></i>Back to Events
+            </a>
+          </div>
+
+          <!-- Event Description -->
+          <div class="event-info-box">
+            <h5><i class="bi bi-file-text me-2" style="color: var(--primary);"></i>About This Event</h5>
+            <p id="detailDescription" class="mb-0" style="line-height: 1.9; color: #444;">
+              A vibrant celebration of Syrian arts, literature, and heritage featuring local artists, poets, and cultural exhibitions.
+            </p>
+          </div>
+
+          <!-- Event Program / Schedule -->
+          <div class="event-info-box">
+            <h5><i class="bi bi-clock me-2" style="color: var(--primary);"></i>Event Schedule</h5>
+            <div class="table-responsive">
+              <table class="table table-hover mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>09:00 AM</td><td>Registration &amp; Welcome</td><td>Main Entrance</td></tr>
+                  <tr><td>10:00 AM</td><td>Opening Ceremony</td><td>Main Hall</td></tr>
+                  <tr><td>11:00 AM</td><td>Cultural Exhibitions Open</td><td>Gallery Rooms</td></tr>
+                  <tr><td>01:00 PM</td><td>Lunch Break</td><td>Cafeteria</td></tr>
+                  <tr><td>02:30 PM</td><td>Workshops &amp; Activities</td><td>Workshop Rooms</td></tr>
+                  <tr><td>05:00 PM</td><td>Closing Ceremony &amp; Awards</td><td>Main Hall</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Image Gallery -->
+          <div class="event-info-box">
+            <h5><i class="bi bi-images me-2" style="color: var(--primary);"></i>Photo Gallery</h5>
+            <div class="gallery-grid">
+              <img src="https://picsum.photos/seed/gallery1/400/280" alt="Gallery image 1" title="Click to view" />
+              <img src="https://picsum.photos/seed/gallery2/400/280" alt="Gallery image 2" title="Click to view" />
+              <img src="https://picsum.photos/seed/gallery3/400/280" alt="Gallery image 3" title="Click to view" />
+              <img src="https://picsum.photos/seed/gallery4/400/280" alt="Gallery image 4" title="Click to view" />
+            </div>
+          </div>
+
+          <!-- Related Events Section -->
+          <div class="mt-4">
+            <h4 class="section-title mb-1">Related Events</h4>
+            <div class="divider"></div>
+            <div class="row" id="relatedEvents">
+              <!-- Injected by main.js loadEventDetail() -->
+              <div class="col-12 text-center py-3">
+                <div class="spinner-border spinner-border-sm" style="color: var(--primary);" role="status"></div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.col-lg-8 -->
+
+        <!-- ============================================================
+             RIGHT COLUMN: Event Info Sidebar
+             ============================================================ -->
+        <div class="col-lg-4">
+
+          <!-- Event Details Card -->
+          <div class="event-info-box sticky-top" style="top: 80px;">
+            <h5><i class="bi bi-info-circle me-2" style="color: var(--primary);"></i>Event Details</h5>
+
+            <div class="info-row">
+              <i class="bi bi-calendar3"></i>
+              <div>
+                <small class="text-muted d-block">Date</small>
+                <strong id="detailDate">May 15, 2026</strong>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <i class="bi bi-geo-alt"></i>
+              <div>
+                <small class="text-muted d-block">Location</small>
+                <strong id="detailLocation">Damascus Cultural Center</strong>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <i class="bi bi-tag"></i>
+              <div>
+                <small class="text-muted d-block">Category</small>
+                <span id="detailCategory"></span>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <i class="bi bi-check-circle"></i>
+              <div>
+                <small class="text-muted d-block">Status</small>
+                <span id="detailStatus"></span>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <i class="bi bi-ticket"></i>
+              <div>
+                <small class="text-muted d-block">Admission</small>
+                <strong class="text-success">Free Entry</strong>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <i class="bi bi-people"></i>
+              <div>
+                <small class="text-muted d-block">Capacity</small>
+                <strong>500 Attendees</strong>
+              </div>
+            </div>
+
+            <hr />
+
+            <!-- CTA Buttons in sidebar -->
+            <button class="btn btn-primary-custom w-100 mb-2" id="addToCalendarBtn2"
+                    onclick="addToCalendar()">
+              <i class="bi bi-calendar-plus me-2"></i>Add to Calendar
+            </button>
+            <button class="btn btn-secondary-custom w-100" onclick="openShareModal()">
+              <i class="bi bi-share me-2"></i>Share Event
+            </button>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div class="event-info-box mt-3">
+            <h5><i class="bi bi-map me-2" style="color: var(--primary);"></i>Location Map</h5>
+            <div class="map-placeholder">
+              <img src="https://picsum.photos/seed/map1/600/220" alt="Location map placeholder" />
+            </div>
+            <p class="small text-muted mt-2 mb-0">
+              <i class="bi bi-geo-alt me-1" style="color: var(--primary);"></i>
+              <span id="detailLocationMap">Damascus Cultural Center, Damascus, Syria</span>
+            </p>
+          </div>
+
+          <!-- Organizer Info -->
+          <div class="event-info-box mt-3">
+            <h5><i class="bi bi-building me-2" style="color: var(--primary);"></i>Organizer</h5>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://picsum.photos/seed/org1/80/80" alt="Organizer"
+                   style="width:55px; height:55px; border-radius:50%; object-fit:cover; border:2px solid var(--primary);" />
+              <div>
+                <strong class="d-block">SVU Cultural Committee</strong>
+                <small class="text-muted">events@svuonline.org</small>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.col-lg-4 -->
+
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </main>
+
+  <!-- ============================================================
+       SHARE MODAL
+       ============================================================ -->
+  <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius: var(--radius); border: none;">
+        <div class="modal-header" style="background: var(--secondary); color: #fff; border-radius: var(--radius) var(--radius) 0 0;">
+          <h5 class="modal-title" id="shareModalLabel">
+            <i class="bi bi-share me-2"></i>Share This Event
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small mb-3">Share this event with your friends and family:</p>
+          <div class="share-btn-group">
+            <a href="#" id="shareFacebook" target="_blank" rel="noopener noreferrer" class="share-facebook">
+              <i class="bi bi-facebook"></i> Share on Facebook
+            </a>
+            <a href="#" id="shareTwitter" target="_blank" rel="noopener noreferrer" class="share-twitter">
+              <i class="bi bi-twitter-x"></i> Share on Twitter / X
+            </a>
+            <a href="#" id="shareWhatsapp" target="_blank" rel="noopener noreferrer" class="share-whatsapp">
+              <i class="bi bi-whatsapp"></i> Share on WhatsApp
+            </a>
+            <a href="#" id="shareTelegram" target="_blank" rel="noopener noreferrer" class="share-telegram">
+              <i class="bi bi-telegram"></i> Share on Telegram
+            </a>
+            <button id="shareCopyLink" class="share-copy w-100 border-0 text-start">
+              <i class="bi bi-clipboard"></i> Copy Link
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <span class="footer-logo"><i class="bi bi-calendar-event me-2"></i>دليل الفعاليات</span>
+          <p>The official events guide of the Syrian Virtual University. Discover, explore, and participate in cultural, sports, music, and family events.</p>
+          <div class="footer-social mt-3">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">All Events</a></li>
+            <li><a href="event.html">Event Details</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="events.html?category=culture">Culture - ثقافة</a></li>
+            <li><a href="events.html?category=sports">Sports - رياضة</a></li>
+            <li><a href="events.html?category=music">Music - موسيقى</a></li>
+            <li><a href="events.html?category=family">Family - عائلي</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5>Contact Us</h5>
+          <ul>
+            <li class="mb-2"><i class="bi bi-geo-alt text-primary-custom me-2"></i>Syrian Virtual University, Damascus, Syria</li>
+            <li class="mb-2"><i class="bi bi-envelope text-primary-custom me-2"></i>events@svuonline.org</li>
+            <li class="mb-2"><i class="bi bi-telephone text-primary-custom me-2"></i>+963 11 XXX XXXX</li>
+            <li><i class="bi bi-clock text-primary-custom me-2"></i>Sun – Thu: 9:00 AM – 5:00 PM</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="mb-0">&copy; 2026 SVU Events Guide &mdash; دليل فعاليات الجامعة الافتراضية السورية. All rights reserved. | Project BWP401</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" aria-label="Scroll to top"><i class="bi bi-chevron-up"></i></button>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
