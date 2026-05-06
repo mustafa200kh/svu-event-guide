@@ -198,6 +198,10 @@ img {
 .category-btn.sports   { background: #e8f8e8; color: #2e7d32; border-color: #2e7d32; }
 .category-btn.music    { background: #fce4ec; color: #c62828; border-color: #c62828; }
 .category-btn.family   { background: #fff3e0; color: #e65100; border-color: #e65100; }
+.category-btn.programming { background: #f3e8ff; color: #6f42c1; border-color: #6f42c1; }
+.category-btn.books    { background: #e7f1ff; color: #0d6efd; border-color: #0d6efd; }
+.category-btn.seminar  { background: #e0f7fa; color: #0aa2c0; border-color: #0aa2c0; }
+.category-btn.workshop { background: #fce4f0; color: #d63384; border-color: #d63384; }
 
 .category-btn:hover,
 .category-btn.active {
@@ -205,10 +209,14 @@ img {
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
-.category-btn.culture:hover,  .category-btn.culture.active  { background: #1a73e8; color: #fff; }
-.category-btn.sports:hover,   .category-btn.sports.active   { background: #2e7d32; color: #fff; }
-.category-btn.music:hover,    .category-btn.music.active    { background: #c62828; color: #fff; }
-.category-btn.family:hover,   .category-btn.family.active   { background: #e65100; color: #fff; }
+.category-btn.culture:hover,     .category-btn.culture.active     { background: #1a73e8; color: #fff; }
+.category-btn.sports:hover,      .category-btn.sports.active      { background: #2e7d32; color: #fff; }
+.category-btn.music:hover,       .category-btn.music.active       { background: #c62828; color: #fff; }
+.category-btn.family:hover,      .category-btn.family.active      { background: #e65100; color: #fff; }
+.category-btn.programming:hover, .category-btn.programming.active { background: #6f42c1; color: #fff; }
+.category-btn.books:hover,       .category-btn.books.active       { background: #0d6efd; color: #fff; }
+.category-btn.seminar:hover,     .category-btn.seminar.active     { background: #0aa2c0; color: #fff; }
+.category-btn.workshop:hover,    .category-btn.workshop.active    { background: #d63384; color: #fff; }
 
 /* ============================================================
    EVENT CARDS
@@ -260,11 +268,15 @@ img {
   padding: 0.8rem 1.2rem;
 }
 
-/* Category badge colors */
-.badge-culture  { background: #1a73e8 !important; }
-.badge-sports   { background: #2e7d32 !important; }
-.badge-music    { background: #c62828 !important; }
-.badge-family   { background: #e65100 !important; }
+/* Category badge colors — original + new university categories */
+.badge-culture     { background: #1a73e8 !important; }
+.badge-sports      { background: #2e7d32 !important; }
+.badge-music       { background: #c62828 !important; }
+.badge-family      { background: #e65100 !important; }
+.badge-programming { background: #6f42c1 !important; }
+.badge-books       { background: #0d6efd !important; }
+.badge-seminar     { background: #0aa2c0 !important; }
+.badge-workshop    { background: #d63384 !important; }
 
 .event-meta {
   font-size: 0.82rem;
